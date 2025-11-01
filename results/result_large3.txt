@@ -1,0 +1,137 @@
+Dataset: large3.json
+Vertices: 45, Edges: 44
+SCC count: 41
+
+=== Condensation DAG edges ===
+  Comp3 -> Comp2 (w=1)
+  Comp4 -> Comp3 (w=2)
+  Comp5 -> Comp4 (w=3)
+  Comp6 -> Comp5 (w=4)
+  Comp7 -> Comp6 (w=1)
+  Comp8 -> Comp7 (w=2)
+  Comp9 -> Comp8 (w=3)
+  Comp10 -> Comp9 (w=2)
+  Comp11 -> Comp10 (w=1)
+  Comp12 -> Comp11 (w=4)
+  Comp13 -> Comp12 (w=3)
+  Comp14 -> Comp13 (w=2)
+  Comp15 -> Comp14 (w=4)
+  Comp16 -> Comp15 (w=1)
+  Comp17 -> Comp16 (w=2)
+  Comp18 -> Comp17 (w=3)
+  Comp19 -> Comp18 (w=1)
+  Comp20 -> Comp19 (w=2)
+  Comp21 -> Comp20 (w=4)
+  Comp22 -> Comp21 (w=3)
+  Comp23 -> Comp22 (w=1)
+  Comp24 -> Comp23 (w=2)
+  Comp25 -> Comp24 (w=3)
+  Comp26 -> Comp25 (w=4)
+  Comp27 -> Comp26 (w=1)
+  Comp28 -> Comp27 (w=2)
+  Comp29 -> Comp28 (w=3)
+  Comp30 -> Comp29 (w=2)
+  Comp31 -> Comp30 (w=1)
+  Comp32 -> Comp31 (w=5)
+  Comp33 -> Comp32 (w=4)
+  Comp34 -> Comp33 (w=3)
+  Comp35 -> Comp34 (w=2)
+  Comp36 -> Comp35 (w=4)
+  Comp37 -> Comp36 (w=1)
+  Comp38 -> Comp37 (w=2)
+  Comp39 -> Comp38 (w=3)
+  Comp40 -> Comp39 (w=5)
+
+=== Topological Order ===
+[0, 1, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2]
+
+Source vertex: 0 (component 0)
+
+=== Shortest Path Distances from Source Component ===
+  To Comp0 : 0
+  To Comp1 : unreachable
+  To Comp2 : unreachable
+  To Comp3 : unreachable
+  To Comp4 : unreachable
+  To Comp5 : unreachable
+  To Comp6 : unreachable
+  To Comp7 : unreachable
+  To Comp8 : unreachable
+  To Comp9 : unreachable
+  To Comp10 : unreachable
+  To Comp11 : unreachable
+  To Comp12 : unreachable
+  To Comp13 : unreachable
+  To Comp14 : unreachable
+  To Comp15 : unreachable
+  To Comp16 : unreachable
+  To Comp17 : unreachable
+  To Comp18 : unreachable
+  To Comp19 : unreachable
+  To Comp20 : unreachable
+  To Comp21 : unreachable
+  To Comp22 : unreachable
+  To Comp23 : unreachable
+  To Comp24 : unreachable
+  To Comp25 : unreachable
+  To Comp26 : unreachable
+  To Comp27 : unreachable
+  To Comp28 : unreachable
+  To Comp29 : unreachable
+  To Comp30 : unreachable
+  To Comp31 : unreachable
+  To Comp32 : unreachable
+  To Comp33 : unreachable
+  To Comp34 : unreachable
+  To Comp35 : unreachable
+  To Comp36 : unreachable
+  To Comp37 : unreachable
+  To Comp38 : unreachable
+  To Comp39 : unreachable
+  To Comp40 : unreachable
+
+=== Longest Path (Critical Path) Distances ===
+  To Comp0 : 0
+  To Comp1 : 0
+  To Comp2 : 96
+  To Comp3 : 95
+  To Comp4 : 93
+  To Comp5 : 90
+  To Comp6 : 86
+  To Comp7 : 85
+  To Comp8 : 83
+  To Comp9 : 80
+  To Comp10 : 78
+  To Comp11 : 77
+  To Comp12 : 73
+  To Comp13 : 70
+  To Comp14 : 68
+  To Comp15 : 64
+  To Comp16 : 63
+  To Comp17 : 61
+  To Comp18 : 58
+  To Comp19 : 57
+  To Comp20 : 55
+  To Comp21 : 51
+  To Comp22 : 48
+  To Comp23 : 47
+  To Comp24 : 45
+  To Comp25 : 42
+  To Comp26 : 38
+  To Comp27 : 37
+  To Comp28 : 35
+  To Comp29 : 32
+  To Comp30 : 30
+  To Comp31 : 29
+  To Comp32 : 24
+  To Comp33 : 20
+  To Comp34 : 17
+  To Comp35 : 15
+  To Comp36 : 11
+  To Comp37 : 10
+  To Comp38 : 8
+  To Comp39 : 5
+  To Comp40 : 0
+
+Total time: 0,959 ms
+Operation count: 327

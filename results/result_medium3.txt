@@ -1,0 +1,70 @@
+Dataset: medium3.json
+Vertices: 18, Edges: 17
+SCC count: 18
+
+=== Condensation DAG edges ===
+  Comp1 -> Comp0 (w=2)
+  Comp2 -> Comp1 (w=1)
+  Comp3 -> Comp2 (w=2)
+  Comp4 -> Comp3 (w=1)
+  Comp6 -> Comp5 (w=4)
+  Comp7 -> Comp6 (w=2)
+  Comp8 -> Comp7 (w=4)
+  Comp9 -> Comp8 (w=2)
+  Comp10 -> Comp9 (w=4)
+  Comp10 -> Comp4 (w=2)
+  Comp12 -> Comp11 (w=3)
+  Comp13 -> Comp12 (w=3)
+  Comp14 -> Comp13 (w=3)
+  Comp15 -> Comp14 (w=5)
+  Comp16 -> Comp15 (w=3)
+  Comp17 -> Comp16 (w=1)
+  Comp17 -> Comp10 (w=2)
+
+=== Topological Order ===
+[17, 16, 10, 15, 9, 4, 14, 8, 3, 13, 7, 2, 12, 6, 1, 11, 5, 0]
+
+Source vertex: 0 (component 17)
+
+=== Shortest Path Distances from Source Component ===
+  To Comp0 : 10
+  To Comp1 : 8
+  To Comp2 : 7
+  To Comp3 : 5
+  To Comp4 : 4
+  To Comp5 : 18
+  To Comp6 : 14
+  To Comp7 : 12
+  To Comp8 : 8
+  To Comp9 : 6
+  To Comp10 : 2
+  To Comp11 : 18
+  To Comp12 : 15
+  To Comp13 : 12
+  To Comp14 : 9
+  To Comp15 : 4
+  To Comp16 : 1
+  To Comp17 : 0
+
+=== Longest Path (Critical Path) Distances ===
+  To Comp0 : 10
+  To Comp1 : 8
+  To Comp2 : 7
+  To Comp3 : 5
+  To Comp4 : 4
+  To Comp5 : 18
+  To Comp6 : 14
+  To Comp7 : 12
+  To Comp8 : 8
+  To Comp9 : 6
+  To Comp10 : 2
+  To Comp11 : 18
+  To Comp12 : 15
+  To Comp13 : 12
+  To Comp14 : 9
+  To Comp15 : 4
+  To Comp16 : 1
+  To Comp17 : 0
+
+Total time: 0,213 ms
+Operation count: 173

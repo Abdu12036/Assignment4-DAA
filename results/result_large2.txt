@@ -1,0 +1,117 @@
+Dataset: large2.json
+Vertices: 35, Edges: 30
+SCC count: 35
+
+=== Condensation DAG edges ===
+  Comp1 -> Comp0 (w=2)
+  Comp2 -> Comp1 (w=5)
+  Comp3 -> Comp2 (w=3)
+  Comp4 -> Comp3 (w=5)
+  Comp5 -> Comp4 (w=2)
+  Comp6 -> Comp5 (w=1)
+  Comp8 -> Comp7 (w=1)
+  Comp9 -> Comp8 (w=2)
+  Comp10 -> Comp9 (w=1)
+  Comp11 -> Comp10 (w=2)
+  Comp12 -> Comp11 (w=4)
+  Comp13 -> Comp12 (w=3)
+  Comp15 -> Comp14 (w=2)
+  Comp16 -> Comp15 (w=4)
+  Comp17 -> Comp16 (w=2)
+  Comp18 -> Comp17 (w=1)
+  Comp19 -> Comp18 (w=1)
+  Comp20 -> Comp19 (w=2)
+  Comp22 -> Comp21 (w=3)
+  Comp23 -> Comp22 (w=1)
+  Comp24 -> Comp23 (w=3)
+  Comp25 -> Comp24 (w=4)
+  Comp26 -> Comp25 (w=2)
+  Comp27 -> Comp26 (w=1)
+  Comp29 -> Comp28 (w=4)
+  Comp30 -> Comp29 (w=3)
+  Comp31 -> Comp30 (w=1)
+  Comp32 -> Comp31 (w=2)
+  Comp33 -> Comp32 (w=3)
+  Comp34 -> Comp33 (w=5)
+
+=== Topological Order ===
+[6, 13, 20, 27, 34, 5, 12, 19, 26, 33, 4, 11, 18, 25, 32, 3, 10, 17, 24, 31, 2, 9, 16, 23, 30, 1, 8, 15, 22, 29, 0, 7, 14, 21, 28]
+
+Source vertex: 0 (component 6)
+
+=== Shortest Path Distances from Source Component ===
+  To Comp0 : 18
+  To Comp1 : 16
+  To Comp2 : 11
+  To Comp3 : 8
+  To Comp4 : 3
+  To Comp5 : 1
+  To Comp6 : 0
+  To Comp7 : unreachable
+  To Comp8 : unreachable
+  To Comp9 : unreachable
+  To Comp10 : unreachable
+  To Comp11 : unreachable
+  To Comp12 : unreachable
+  To Comp13 : unreachable
+  To Comp14 : unreachable
+  To Comp15 : unreachable
+  To Comp16 : unreachable
+  To Comp17 : unreachable
+  To Comp18 : unreachable
+  To Comp19 : unreachable
+  To Comp20 : unreachable
+  To Comp21 : unreachable
+  To Comp22 : unreachable
+  To Comp23 : unreachable
+  To Comp24 : unreachable
+  To Comp25 : unreachable
+  To Comp26 : unreachable
+  To Comp27 : unreachable
+  To Comp28 : unreachable
+  To Comp29 : unreachable
+  To Comp30 : unreachable
+  To Comp31 : unreachable
+  To Comp32 : unreachable
+  To Comp33 : unreachable
+  To Comp34 : unreachable
+
+=== Longest Path (Critical Path) Distances ===
+  To Comp0 : 18
+  To Comp1 : 16
+  To Comp2 : 11
+  To Comp3 : 8
+  To Comp4 : 3
+  To Comp5 : 1
+  To Comp6 : 0
+  To Comp7 : 13
+  To Comp8 : 12
+  To Comp9 : 10
+  To Comp10 : 9
+  To Comp11 : 7
+  To Comp12 : 3
+  To Comp13 : 0
+  To Comp14 : 12
+  To Comp15 : 10
+  To Comp16 : 6
+  To Comp17 : 4
+  To Comp18 : 3
+  To Comp19 : 2
+  To Comp20 : 0
+  To Comp21 : 14
+  To Comp22 : 11
+  To Comp23 : 10
+  To Comp24 : 7
+  To Comp25 : 3
+  To Comp26 : 1
+  To Comp27 : 0
+  To Comp28 : 18
+  To Comp29 : 14
+  To Comp30 : 11
+  To Comp31 : 10
+  To Comp32 : 8
+  To Comp33 : 5
+  To Comp34 : 0
+
+Total time: 3,429 ms
+Operation count: 267

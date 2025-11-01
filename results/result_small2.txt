@@ -1,0 +1,34 @@
+Dataset: small2.json
+Vertices: 8, Edges: 8
+SCC count: 6
+
+=== Condensation DAG edges ===
+  Comp1 -> Comp0 (w=1)
+  Comp2 -> Comp1 (w=3)
+  Comp3 -> Comp2 (w=5)
+  Comp4 -> Comp3 (w=4)
+  Comp5 -> Comp4 (w=2)
+
+=== Topological Order ===
+[5, 4, 3, 2, 1, 0]
+
+Source vertex: 0 (component 5)
+
+=== Shortest Path Distances from Source Component ===
+  To Comp0 : 15
+  To Comp1 : 14
+  To Comp2 : 11
+  To Comp3 : 6
+  To Comp4 : 2
+  To Comp5 : 0
+
+=== Longest Path (Critical Path) Distances ===
+  To Comp0 : 15
+  To Comp1 : 14
+  To Comp2 : 11
+  To Comp3 : 6
+  To Comp4 : 2
+  To Comp5 : 0
+
+Total time: 0,167 ms
+Operation count: 60

@@ -1,0 +1,74 @@
+Dataset: large1.json
+Vertices: 25, Edges: 21
+SCC count: 21
+
+=== Condensation DAG edges ===
+  Comp1 -> Comp0 (w=1)
+  Comp3 -> Comp2 (w=2)
+  Comp4 -> Comp3 (w=3)
+  Comp5 -> Comp4 (w=4)
+  Comp8 -> Comp7 (w=2)
+  Comp9 -> Comp8 (w=3)
+  Comp10 -> Comp9 (w=1)
+  Comp11 -> Comp10 (w=2)
+  Comp12 -> Comp11 (w=4)
+  Comp13 -> Comp12 (w=3)
+  Comp15 -> Comp14 (w=2)
+  Comp16 -> Comp15 (w=4)
+  Comp18 -> Comp17 (w=3)
+  Comp19 -> Comp18 (w=2)
+  Comp20 -> Comp19 (w=5)
+
+=== Topological Order ===
+[1, 5, 6, 13, 16, 20, 0, 4, 12, 15, 19, 3, 11, 14, 18, 2, 10, 17, 9, 8, 7]
+
+Source vertex: 0 (component 1)
+
+=== Shortest Path Distances from Source Component ===
+  To Comp0 : 1
+  To Comp1 : 0
+  To Comp2 : unreachable
+  To Comp3 : unreachable
+  To Comp4 : unreachable
+  To Comp5 : unreachable
+  To Comp6 : unreachable
+  To Comp7 : unreachable
+  To Comp8 : unreachable
+  To Comp9 : unreachable
+  To Comp10 : unreachable
+  To Comp11 : unreachable
+  To Comp12 : unreachable
+  To Comp13 : unreachable
+  To Comp14 : unreachable
+  To Comp15 : unreachable
+  To Comp16 : unreachable
+  To Comp17 : unreachable
+  To Comp18 : unreachable
+  To Comp19 : unreachable
+  To Comp20 : unreachable
+
+=== Longest Path (Critical Path) Distances ===
+  To Comp0 : 1
+  To Comp1 : 0
+  To Comp2 : 9
+  To Comp3 : 7
+  To Comp4 : 4
+  To Comp5 : 0
+  To Comp6 : 0
+  To Comp7 : 15
+  To Comp8 : 13
+  To Comp9 : 10
+  To Comp10 : 9
+  To Comp11 : 7
+  To Comp12 : 3
+  To Comp13 : 0
+  To Comp14 : 6
+  To Comp15 : 4
+  To Comp16 : 0
+  To Comp17 : 10
+  To Comp18 : 7
+  To Comp19 : 5
+  To Comp20 : 0
+
+Total time: 11,432 ms
+Operation count: 154

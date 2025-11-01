@@ -1,41 +1,61 @@
 package graph.util;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
+/**
+ * SimpleMetrics implements Metrics interface.
+ * Tracks timing and arbitrary counters by name.
+ */
 public class SimpleMetrics implements Metrics {
-    private long start = 0;
-    private long end = 0;
+
+    private long startTime;
+    private long elapsed;
     private final Map<String, Integer> counters = new HashMap<>();
 
+    // --- Timing ---
     @Override
     public void startTimer() {
-        start = System.nanoTime();
+        startTime = System.nanoTime();
     }
 
     @Override
     public void stopTimer() {
-        end = System.nanoTime();
+        elapsed += System.nanoTime() - startTime;
     }
 
     @Override
     public long elapsedNano() {
-        if (start == 0) return 0;
-        return (end == 0 ? System.nanoTime() : end) - start;
+        return elapsed;
+    }
+
+    // --- Counters ---
+    @Override
+    public void inc(String name) {
+        counters.merge(name, 1, Integer::sum);
     }
 
     @Override
-    public void inc(String counterName) {
-        counters.put(counterName, counters.getOrDefault(counterName, 0) + 1);
-    }
-
-    @Override
-    public int getCount(String counterName) {
-        return counters.getOrDefault(counterName, 0);
+    public int getCount(String name) {
+        return counters.getOrDefault(name, 0);
     }
 
     @Override
     public Map<String, Integer> getAllCounts() {
-        return Map.copyOf(counters);
+        return Collections.unmodifiableMap(counters);
+    }
+
+    // --- Helpers ---
+    public void reset() {
+        counters.clear();
+        elapsed = 0;
+    }
+
+    public long getOps() {
+        return counters.values().stream().mapToInt(Integer::intValue).sum();
+    }
+
+    public void report(String label) {
+        System.out.printf("%s: time=%.3f ms, totalOps=%d%n",
+                label, elapsed / 1e6, getOps());
     }
 }

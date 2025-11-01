@@ -11,6 +11,8 @@ public class Condensation {
     public final int compCount;
     public final List<List<Edge>> condAdj;
     public final Map<Integer, List<Integer>> compToNodes; // component id -> original nodes
+    public final int[] nodeToComp; // node id -> component id
+
 
     /**
      * @param n total nodes
@@ -20,22 +22,21 @@ public class Condensation {
     public Condensation(int n, List<List<Integer>> sccs, List<Edge> origEdges) {
         this.compCount = sccs.size();
         compToNodes = new HashMap<>();
+        nodeToComp = new int[n];
+        Arrays.fill(nodeToComp, -1);
+
         for (int i = 0; i < sccs.size(); i++) {
             compToNodes.put(i, new ArrayList<>(sccs.get(i)));
+            for (int node : sccs.get(i)) {
+                nodeToComp[node] = i;
+            }
         }
 
-        // node -> comp id
-        int[] compId = new int[n];
-        Arrays.fill(compId, -1);
-        for (int i = 0; i < sccs.size(); i++) {
-            for (int node : sccs.get(i)) compId[node] = i;
-        }
-
-        // build minimal weight edges between components
-        Map<Long, Long> minWeight = new HashMap<>(); // key = (cu<<32)|cv -> weight
+        // build minimal-weight edges between components
+        Map<Long, Long> minWeight = new HashMap<>();
         for (Edge e : origEdges) {
-            int cu = compId[e.u];
-            int cv = compId[e.v];
+            int cu = nodeToComp[e.u];
+            int cv = nodeToComp[e.v];
             if (cu == cv) continue;
             long key = (((long) cu) << 32) | (cv & 0xffffffffL);
             long w = e.w;
@@ -53,4 +54,5 @@ public class Condensation {
             condAdj.get(cu).add(new Edge(cu, cv, kv.getValue()));
         }
     }
+
 }
